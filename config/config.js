@@ -28,15 +28,16 @@ export const navigation = {
       title: "Links",
       link: "/links",
     },
-    {
-      title: "Blog",
-      link: "https://medium.com/@hashirshoaeb",
-    },
+    // {
+    //   title: "Blog",
+    //   link: "https://medium.com/@hashirshoaeb",
+    // },
   ],
 }
 export const intro = {
   title: "Hey, I'm Jade",
-  description: "A Computer Engineer creating mobile apps and static websites.",
+  description:
+    " A full stack developer with real experience building websites and online services.",
   image: profile.src,
   buttons: [
     {
