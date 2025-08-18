@@ -1,10 +1,16 @@
-
-import profile from './profile.png';
-import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
-import { } from '@fortawesome/free-solid-svg-icons';
+import profile from "./profile.jpg"
+import {
+  faBrowser,
+  faInternetExplorer,
+  faGithub,
+  faFigma,
+  faGooglePlay,
+  faAppStore,
+} from "@fortawesome/free-brands-svg-icons"
+import {} from "@fortawesome/free-solid-svg-icons"
 
 export const navigation = {
-  name: "Hashir",
+  name: "Jade",
   links: [
     {
       title: "About",
@@ -25,11 +31,11 @@ export const navigation = {
     {
       title: "Blog",
       link: "https://medium.com/@hashirshoaeb",
-    }
+    },
   ],
 }
 export const intro = {
-  title: "Hey, I'm Hashir",
+  title: "Hey, I'm Jade",
   description: "A Computer Engineer creating mobile apps and static websites.",
   image: profile.src,
   buttons: [
@@ -40,7 +46,7 @@ export const intro = {
     },
     {
       title: "Resume",
-      link: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+      link: "/Jade_Shi_FullStackDeveloper.pdf", // Make sure Jade_Shi_FullStackDeveloper.pdf is in your /public directory. Access it at /Jade_Shi_FullStackDeveloper.pdf.
       isPrimary: false,
     },
   ],
@@ -49,25 +55,34 @@ export const intro = {
 export const about = {
   title: "Who I am",
   description: [
-    "I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering. I kick started my professional career as a mobile application developer working remotely for a UK based startup — Lessgo.",
-    "The tech industry is ever-evolving and I love being able to grow with it, while continually solidifying the fundamentals. I opensource my code from a place of empathy - for future developers, teammates, users, and with accessibility in mind. I also love joining communities, helping and mentoring new developers, and supporting organizations to promote diversity in tech. I’m sharing my programming journey on instagram, helping people who are just getting into the space of programming.",
-    "When I’m not programming, I focus on my hobbies which are: diary writing, doodling, meeting people and growing my network.",
+    "I finished my studies at the University of Melbourne, where I majored in Information Technology, and I live in Melbourne now. I am a Full-Stack Developer with real experience building websites and online services. I work with JavaScript (React.js, Next.js), .NET Core APIs, and databases (both SQL and NoSQL). I also use Docker and CI/CD, and I am learning Kubernetes now.",
+    "I enjoy learning new things and working with others. Outside of work, I love coffee, fishing, and almost every kind of sport. I am also planning to learn diving soon.",
   ],
 }
 
 export const work = {
-  title: "What I do",
+  title: "What I can do",
   cards: [
     {
-      title: "Mobile App Development",
-      description: "I create pixel perfect iOS and Andriod apps using Flutter.",
-      icons: null,
+      title: "Front-End Developer (React.js / Next.js)",
+      description: [
+        "Build modern websites using React.js and Next.js.",
+        "Design user-friendly pages, forms, and shopping carts.",
+        "Ensure fast performance and responsive design on all devices.",
+      ],
+      icons: [],
     },
     {
-      title: "Web Development",
-      description: "I create responsive static websites using Reactjs.",
-      icons: null,
-    }
+      title: "Back-End Developer (.NET Core / Databases)",
+      description: [
+        "Build the “engine” of apps with .NET Core APIs.",
+
+        "Work with both SQL and NoSQL databases to keep and find data.",
+
+        "Make apps secure, fast, and always available.",
+      ],
+      icons: [],
+    },
   ],
 }
 
@@ -75,95 +90,77 @@ export const projects = {
   title: "Projects",
   cards: [
     {
-      title: "StarBook",
-      description: "A digital diary and mood tracking app that helps you in keeping track of your mood and productivity throughout the month/year.",
+      title: "RECAM",
+      description:
+        "A platform for photography companies to manage their media files and clients(property agency), and also for property agency have access to the media files and pick the ones they need.",
       icons: [
         {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
+          icon: faInternetExplorer, // This icon from @fortawesome/free-brands-svg-icons indicates a link to a website
+          link: "https://remp-react-prod-xi.vercel.app/preview",
         },
-        {
-          icon: faGithub,
-          link: "https://github.com/hashirshoaeb/star_book",
-        },
-      ]
+      ],
     },
     {
-      title: "QuranTalk",
-      description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
+      title: "NDISAU",
+      description:
+        "An platform for NDIS customers schedule their meals and get delivered to their home, also for restaurant to manage their menus, orders and deliveries. ",
       icons: [
         {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
+          // Place your .zip file in the `public/downloads` directory of your Next.js project.
+          // The file will then be accessible at "/downloads/ndisau-figma-photos.zip" in the browser.
+          icon: faFigma, // This icon from @fortawesome/free-brands-svg-icons indicates a link to download the Figma photos zip
+          link: "/downloads/ndisau-figma-photos.zip", // Clicking this will download the Figma photos zip
+          download: true, // Optional: can be used in your component to trigger download
         },
-        {
-          icon: faGooglePlay,
-          link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
-        },
-      ]
-    },
-    {
-      title: "Portfolio",
-      description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-      icons: [
-        {
-          icon: faGithub,
-          link: "https://github.com/hashirshoaeb/portfolio",
-        },
-      ]
+      ],
     },
   ],
 }
 
 export const contact = {
   title: "Get in touch",
-  description: "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at hashirshoaeb@gmail.com.",
+  description:
+    "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at shiziqi022@gmail.com.",
   buttons: [
     {
       title: "Email Me",
-      link: "mailto:hashirshoaeb@gmail.com",
+      link: "mailto:shiziqi022@gmail.com",
       isPrimary: true,
     },
-    {
-      title: "Schedule Meeting",
-      link: "https://topmate.io/hashirshoaeb",
-      isPrimary: false,
-    },
-  ]
+    // {
+    //   title: "Schedule Meeting",
+    //   link: "https://topmate.io/hashirshoaeb",
+    //   isPrimary: false,
+    // },
+  ],
 }
 
-// SEARCH ENGINE 
+// SEARCH ENGINE
 export const SEO = {
-  // 50 - 60 char  
-  title: "Hashir Shoaib | Computer Engineer | Flutter | Reactjs developer",
-  description: "I create mobile apps and static websites. I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering.",
+  // 50 - 60 char
+  title: "Jade SHI | Software Engineer | .Net developer | Reactjs developer",
+  description:
+    "I am a Full-Stack Developer with real experience building websites and online services. I work with JavaScript (React.js, Next.js), .NET Core APIs, and databases (both SQL and NoSQL). I also use Docker and CI/CD, and I am learning Kubernetes now.",
+
   image: profile.src,
 }
 
 export const links = {
   image: profile.src,
-  title: "@hashirshoaeb",
-  description: "Computer Engineer | Flutter | Reactjs Developer",
+  title: "@jadeshi",
+  description: "Software Engineer | .NET Developer | React.js Developer",
   cards: [
     {
-      title: "My website",
-      link: "https://hashirshoaeb.com/",
-    },
-    {
-      title: "QuranTalk App",
-      link: "https://www.qurantalk.app/",
-    },
-    {
-      title: "StarBook App",
-      link: "https://starbook.dev/",
+      title: "My Portfolio",
+      link: "/Jade_Shi_FullStackDeveloper.pdf",
     },
     {
       title: "My GitHub",
-      link: "https://github.com/hashirshoaeb/",
+      link: "https://github.com/JadeShi-1018",
     },
     {
       title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/hashirshoaeb/",
+      link: "https://www.linkedin.com/in/ziqi-shi-183863236",
     },
-  ]
+  ],
 }
