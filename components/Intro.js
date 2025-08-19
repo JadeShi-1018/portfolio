@@ -5,39 +5,31 @@ export const Intro = ({ title, description, image, buttons }) => {
   return (
     <div className='bg-secondary py-5 px-5'>
       <div className='container'>
-        <div className=' row align-items-center'>
+        <div className='row align-items-center'>
           <div className='col-sm-6'>
             <h1 className='text-primary fw-bold display-3'>{title}</h1>
             <p>{description}</p>
-            <div className='text-center'>
-              {buttons.map((value, index) =>
-                value.isPrimary ? (
-                  <Link
-                    key={index}
-                    href={value.link}
-                    className='btn btn-primary my-1 mx-3'
-                  >
-                    {value.title}
+            <div className='text-center d-flex flex-column flex-sm-row justify-content-center align-items-center'>
+              {buttons.map((value, index) => (
+                <div key={index} className='my-2 mx-2'>
+                  <Link href={value.link} passHref>
+                    <a
+                      className={`btn ${
+                        value.isPrimary ? "btn-primary" : "btn-outline-primary"
+                      } px-4 py-2`}
+                      style={{ minWidth: "140px", display: "inline-block" }}
+                    >
+                      {value.title}
+                    </a>
                   </Link>
-                ) : (
-                  <Link
-                    key={index}
-                    href={value.link}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='btn btn-outline-primary my-1 mx-3'
-                  >
-                    {value.title}
-                  </Link>
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
-          <div className='col-sm-6 text-center'>
+          <div className='col-sm-6 text-end'>
             <img
               className='img-fluid my-3 card-image'
-              width='250'
-              height='250'
+              style={{ maxWidth: "200px", height: "auto" }}
               src={image}
               alt='profile of Jade Shi'
             />

@@ -36,8 +36,7 @@ export const navigation = {
 }
 export const intro = {
   title: "Hey, I'm Jade",
-  description:
-    " A full stack developer with real experience building websites and online services.",
+  description: "A Computer Engineer creating mobile apps and static websites.",
   image: profile.src,
   buttons: [
     {

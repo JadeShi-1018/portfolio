@@ -32,9 +32,11 @@ export const Nav = ({ title, links }) => {
         >
           <div className='navbar-nav'>
             {links.map((value, index) => (
-              <Link key={index} href={value.link} className='nav-link'>
-                {value.title}
-              </Link>
+              <div key={index} className='nav-item mx-2'>
+                <Link href={value.link} className='nav-link'>
+                  {value.title}
+                </Link>
+              </div>
             ))}
           </div>
         </div>

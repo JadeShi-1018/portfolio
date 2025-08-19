@@ -8,26 +8,27 @@ export const Contact = ({ title, description, buttons }) => {
         <h1 className='text-primary fw-bold'>{title}</h1>
         <div className='px-sm-5'>
           <p>{description}</p>
-          <div className=''>
-            {buttons.map((value, index) =>
-              value.isPrimary ? (
-                <Link
-                  key={index}
-                  href={value.link}
-                  className='btn btn-primary my-1 mx-3'
+          <div>
+            {buttons.map((value, index) => (
+              <Link key={index} href={value.link} passHref>
+                <a
+                  className={`btn ${
+                    value.isPrimary ? "btn-primary" : "btn-outline-primary"
+                  } my-1 mx-3`}
+                  style={{
+                    backgroundColor: value.isPrimary
+                      ? "#1a365d"
+                      : "transparent",
+                    color: value.isPrimary ? "#fff" : "#1a365d",
+                    borderColor: "#1a365d",
+                    minWidth: "140px",
+                    display: "inline-block",
+                  }}
                 >
                   {value.title}
-                </Link>
-              ) : (
-                <Link
-                  key={index}
-                  href={value.link}
-                  className='btn btn-outline-primary my-1 mx-3'
-                >
-                  {value.title}
-                </Link>
-              )
-            )}
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
