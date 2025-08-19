@@ -1,8 +1,5 @@
 import React from "react"
-import getConfig from "next/config"
 import Link from "next/link"
-
-const { publicRuntimeConfig } = getConfig()
 
 export const Intro = ({ title, description, image, buttons }) => {
   return (
@@ -42,7 +39,7 @@ export const Intro = ({ title, description, image, buttons }) => {
               width='250'
               height='250'
               src={image}
-              alt='profile of hashirshoaeb'
+              alt='profile of Jade Shi'
             />
           </div>
         </div>
