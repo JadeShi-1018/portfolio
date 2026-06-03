@@ -74,11 +74,11 @@ export const work = {
       icons: [],
     },
     {
-      title: "Back-End Developer (.NET Core / APIs)",
+      title: "Front-End Developer (React.js / Next.js)",
       description: [
-        "Design and build production-grade REST APIs with ASP.NET Core WebAPI.",
-        "Implement payment processing, idempotency, event-driven architecture, and JWT/RBAC security.",
-        "Work with SQL Server, Azure, Docker, and GitHub Actions CI/CD for reliable, observable deployments.",
+        "Build modern, responsive UIs with React.js and Next.js.",
+        "Integrate frontend with backend APIs including auth flows, forms, and payment UI.",
+        "Deliver clean, maintainable components across full-stack projects.",
       ],
       icons: [],
     },
