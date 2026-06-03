@@ -7,7 +7,7 @@ import {
   faGooglePlay,
   faAppStore,
 } from "@fortawesome/free-brands-svg-icons"
-import {} from "@fortawesome/free-solid-svg-icons"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 
 export const navigation = {
   name: "Jade",
@@ -36,7 +36,8 @@ export const navigation = {
 }
 export const intro = {
   title: "Hey, I'm Jade",
-  description: "A Computer Engineer creating mobile apps and static websites.",
+  description:
+    "A Full-Stack .NET Developer based in Melbourne. I build secure, production-grade backend APIs with ASP.NET Core and support them with React/Next.js frontends.",
   image: profile.src,
   buttons: [
     {
@@ -46,7 +47,7 @@ export const intro = {
     },
     {
       title: "Resume",
-      link: "/Jade_Shi_FullStackDeveloper.pdf", // Make sure Jade_Shi_FullStackDeveloper.pdf is in your /public directory. Access it at /Jade_Shi_FullStackDeveloper.pdf.
+      link: "/jade_general_resume.pdf", // Make sure Jade_Shi_FullStackDeveloper.pdf is in your /public directory. Access it at /Jade_Shi_FullStackDeveloper.pdf.
       isPrimary: false,
     },
   ],
@@ -55,8 +56,8 @@ export const intro = {
 export const about = {
   title: "Who I am",
   description: [
-    "I finished my studies at the University of Melbourne, where I majored in Information Technology, and I live in Melbourne now. I am a Full-Stack Developer with real experience building websites and online services. I work with JavaScript (React.js, Next.js), .NET Core APIs, and databases (both SQL and NoSQL). I also use Docker and CI/CD, and I am learning Kubernetes now.",
-    "I enjoy learning new things and working with others. Outside of work, I love coffee, fishing, and almost every kind of sport. I am also planning to learn diving soon.",
+    "I graduated from the University of Melbourne with a Master of Information Technology and hold an AWS Certified Cloud Practitioner credential. I'm a Full-Stack .NET Developer with production experience building secure, scalable APIs using C# .NET, ASP.NET Core, SQL Server, Azure, Docker, and GitHub Actions CI/CD. My focus is on the backend — payment processing, event-driven architecture, idempotency, JWT/RBAC security, and clean API design — with solid React/Next.js skills on the frontend.",
+    "I enjoy solving real problems through practical engineering and working closely with stakeholders to turn operational constraints into technical decisions. Outside of work, I love coffee, fishing, and almost every kind of sport. I'm also planning to learn diving soon.",
   ],
 }
 
@@ -64,22 +65,20 @@ export const work = {
   title: "What I can do",
   cards: [
     {
-      title: "Front-End Developer (React.js / Next.js)",
+      title: "Back-End Developer (.NET Core / APIs)",
       description: [
-        "Build modern websites using React.js and Next.js.",
-        "Design user-friendly pages, forms, and shopping carts.",
-        "Ensure fast performance and responsive design on all devices.",
+        "Design and build production-grade REST APIs with ASP.NET Core WebAPI.",
+        "Implement payment processing, idempotency, event-driven architecture, and JWT/RBAC security.",
+        "Work with SQL Server, Azure, Docker, and GitHub Actions CI/CD for reliable, observable deployments.",
       ],
       icons: [],
     },
     {
-      title: "Back-End Developer (.NET Core / Databases)",
+      title: "Back-End Developer (.NET Core / APIs)",
       description: [
-        "Build the “engine” of apps with .NET Core APIs.",
-
-        "Work with both SQL and NoSQL databases to keep and find data.",
-
-        "Make apps secure, fast, and always available.",
+        "Design and build production-grade REST APIs with ASP.NET Core WebAPI.",
+        "Implement payment processing, idempotency, event-driven architecture, and JWT/RBAC security.",
+        "Work with SQL Server, Azure, Docker, and GitHub Actions CI/CD for reliable, observable deployments.",
       ],
       icons: [],
     },
@@ -90,27 +89,48 @@ export const projects = {
   title: "Projects",
   cards: [
     {
-      title: "RECAM",
+      title: "NDIS Food Ordering & Payment Platform",
       description:
-        "A platform for photography companies to manage their media files and clients(property agency), and also for property agency have access to the media files and pick the ones they need.",
+        "A production-style platform for NDIS customers to schedule meal deliveries and for restaurants to manage menus, orders, and deliveries. Built with ASP.NET Core WebAPI, Next.js, SQL Server, Stripe, RabbitMQ/MassTransit, Docker, and Azure. Features multi-layer idempotency, JWT/RBAC security across 11 endpoints, event-driven order flow with Outbox Pattern, 36 unit and integration tests (89–90% coverage), and k6 load testing (0% error rate at p95 148ms).",
       icons: [
         {
-          icon: faInternetExplorer, // This icon from @fortawesome/free-brands-svg-icons indicates a link to a website
-          link: "https://remp-react-prod-xi.vercel.app/preview",
+          icon: faGithub, // This icon from @fortawesome/free-brands-svg-icons indicates a link to a website
+          link: "https://github.com/JadeShi-1018/ndis-food-ordering-api",
+        },
+        {
+          icon: faGlobe,
+          link: "https://nice-glacier-0b761a000.7.azurestaticapps.net/",
+          // download: true,
         },
       ],
     },
     {
-      title: "NDISAU",
+      title: "Essendon Motel — Late Check-in System",
       description:
-        "An platform for NDIS customers schedule their meals and get delivered to their home, also for restaurant to manage their menus, orders and deliveries. ",
+        "A live production system contracted by a Melbourne motel to replace an after-hours phone service, saving ~$1,200/year. Built with ASP.NET Core, Razor Pages, Stripe pre-authorisation, SMTP, PDF generation, and Azure. Features a token-based guest self-service workflow (details, photo ID upload, e-signature) and a JWT-secured staff admin portal with email notifications — delivered end-to-end as sole developer.",
       icons: [
         {
           // Place your .zip file in the `public/downloads` directory of your Next.js project.
           // The file will then be accessible at "/downloads/ndisau-figma-photos.zip" in the browser.
-          icon: faFigma, // This icon from @fortawesome/free-brands-svg-icons indicates a link to download the Figma photos zip
-          link: "/downloads/ndisau-figma-photos.zip", // Clicking this will download the Figma photos zip
-          download: true, // Optional: can be used in your component to trigger download
+          icon: faGlobe, // This icon from @fortawesome/free-brands-svg-icons indicates a link to download the Figma photos zip
+          link: "https://essendonmotel-latecheckin-app-bfdpavg6arcbgrb5.australiaeast-01.azurewebsites.net/Admin/Login?ReturnUrl=%2Fadmin%2FRegistrations", // Clicking this will download the Figma photos zip
+          // download: true, // Optional: can be used in your component to trigger download
+        },
+      ],
+    },
+
+    {
+      title: "RECAM",
+      description:
+        "A media management platform built for photography companies and property agencies. Photography teams upload and organise media files via Azure Blob Storage; property agency clients access a shared portal to browse and select the assets they need. Built with React, .NET Core, and Azure Blob Storage.",
+      icons: [
+        {
+          icon: faGithub,
+          link: "https://github.com/JadeShi-1018/RECAM", // Replace with actual repo URL
+        },
+        {
+          icon: faGlobe,
+          link: "https://remp-react-prod-xi.vercel.app/preview",
         },
       ],
     },
@@ -120,7 +140,7 @@ export const projects = {
 export const contact = {
   title: "Get in touch",
   description:
-    "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at shiziqi022@gmail.com.",
+    "I'm currently open to mid-level .NET developer roles in Melbourne. Feel free to reach out directly by email at shiziqi022@gmail.com — always happy to chat.",
   buttons: [
     {
       title: "Email Me",
@@ -140,27 +160,26 @@ export const SEO = {
   // 50 - 60 char
   title: "Jade SHI | Software Engineer | .Net developer | Reactjs developer",
   description:
-    "I am a Full-Stack Developer with real experience building websites and online services. I work with JavaScript (React.js, Next.js), .NET Core APIs, and databases (both SQL and NoSQL). I also use Docker and CI/CD, and I am learning Kubernetes now.",
-
+    "Full-Stack .NET Developer based in Melbourne. Production experience with ASP.NET Core, React/Next.js, Azure, Docker, Stripe, and GitHub Actions CI/CD. Open to mid-level .NET developer roles.",
   image: profile.src,
 }
 
 export const links = {
   image: profile.src,
   title: "@jadeshi",
-  description: "Software Engineer | .NET Developer | React.js Developer",
+  description: ".NET Developer | Full-Stack | Melbourne",
   cards: [
     {
-      title: "My Portfolio",
-      link: "/Jade_Shi_FullStackDeveloper.pdf",
+      title: "Resume",
+      link: "/jade_general_resume.pdf",
     },
     {
-      title: "My GitHub",
+      title: "GitHub",
       link: "https://github.com/JadeShi-1018",
     },
     {
       title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/ziqi-shi-183863236",
+      link: "https://www.linkedin.com/in/ziqishi",
     },
   ],
 }
